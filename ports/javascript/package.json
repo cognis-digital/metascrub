@@ -1,0 +1,10 @@
+{
+  "name": "@cognis/metascrub",
+  "version": "0.2.0",
+  "description": "JavaScript port of metascrub (Cognis Neural Suite)",
+  "bin": {
+    "metascrub": "index.js"
+  },
+  "license": "LicenseRef-COCL-1.0",
+  "type": "module"
+}
