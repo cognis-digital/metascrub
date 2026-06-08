@@ -1,30 +1,11 @@
-"""METASCRUB - strip identifying metadata from documents and images before release.
-
-Defensive, analysis-and-sanitization tool. Operates only on local files the
-operator owns or is authorized to clean. No network access. Standard library only.
-
-Spiritual cousin of mat2: "clean before ship".
-"""
-
-from .core import (
-    Finding,
-    ScrubResult,
-    scan_file,
-    clean_file,
-    SUPPORTED_FORMATS,
-    detect_format,
-)
-
-TOOL_NAME = "metascrub"
-TOOL_VERSION = "1.0.0"
-
-__all__ = [
-    "TOOL_NAME",
-    "TOOL_VERSION",
-    "Finding",
-    "ScrubResult",
-    "scan_file",
-    "clean_file",
-    "SUPPORTED_FORMATS",
-    "detect_format",
-]
+"""metascrub — part of the Cognis Neural Suite."""
+try:  # re-export the tool's public API + identity from core
+    from metascrub.core import *  # noqa: F401,F403
+except Exception:  # pragma: no cover
+    pass
+try:
+    from metascrub.core import TOOL_NAME, TOOL_VERSION
+except Exception:  # pragma: no cover
+    TOOL_NAME = "metascrub"
+    TOOL_VERSION = "0.1.0"
+__version__ = TOOL_VERSION
