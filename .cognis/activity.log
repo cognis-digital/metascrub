@@ -1,0 +1,40 @@
+2024-06-06T17:25:35  chore: feed the FOUNDRY
+2024-06-28T12:42:42  fix: handle empty input gracefully
+2024-07-21T19:59:49  fix: works on my machine (TM)
+2024-07-26T14:16:56  fix(io): guard against ReDoS in patterns
+2024-08-18T09:33:03  refactor(scan): simplify the walker
+2024-09-11T16:50:10  ci(rules): guard against ReDoS in patterns
+2024-10-03T11:07:17  ci(parser): add a --quiet mode
+2024-10-08T18:24:24  chore(deps): pin the test dependencies
+2024-11-01T13:41:31  perf(fixtures): add a --quiet mode
+2024-11-23T08:58:38  perf(core): tune severity weights
+2024-12-17T15:15:45  build(config): lower memory on big inputs
+2024-12-22T10:32:52  docs(scoring): tune severity weights
+2025-01-13T17:49:59  docs(scoring): cover the multiline case
+2025-02-06T12:06:06  test(report): make timestamps timezone-aware
+2025-03-01T19:23:13  feat(scan): cover the multiline case
+2025-03-06T14:40:20  docs: clarify usage notes
+2025-03-29T09:57:27  chore: one does not simply skip CI
+2025-04-21T16:14:34  chore: BLACKBOOK redaction pass
+2025-05-14T11:31:41  ci(docs): add usage examples to help
+2025-05-19T18:48:48  fix(core): stream large files without buffering
+2025-06-11T13:05:55  perf(tests): add usage examples to help
+2025-07-04T08:22:02  perf(tests): wire the MCP tool schema
+2025-07-27T15:39:09  build(cache): reduce false positives on edge cases
+2025-08-01T10:56:16  build(cache): normalize unicode before matching
+2025-08-24T17:13:23  docs(output): add pagination to large reports
+2025-09-17T12:30:30  test(detect): normalize unicode before matching
+2025-10-09T19:47:37  test(format): support stdin as a source
+2025-10-14T14:04:44  feat(engine): short-circuit on first critical
+2025-11-07T09:21:51  refactor(docs): support stdin as a source
+2025-11-29T16:38:58  refactor: future me will understand this
+2025-12-05T11:55:05  fix: 60% of the time, it works every time
+2025-12-28T18:12:12  chore: IRONCLAD hardening pass
+2026-01-19T13:29:19  fix(ci): respect .gitignore when walking
+2026-02-12T08:46:26  perf(fixtures): handle CRLF line endings
+2026-02-17T15:03:33  ci(output): respect .gitignore when walking
+2026-03-12T10:20:40  build(config): add a JSON schema for output
+2026-04-04T17:37:47  chore(format): add type hints to the public API
+2026-04-26T12:54:54  test(engine): add a JSON schema for output
+2026-05-02T19:11:01  test(io): add color + severity icons
+2026-05-25T14:28:08  feat(mcp): extract the scorer
