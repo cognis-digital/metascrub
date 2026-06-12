@@ -16,7 +16,7 @@
 </div>
 
 ```bash
-pip install cognis-metascrub
+pip install "git+https://github.com/cognis-digital/metascrub.git"
 metascrub scan .            # → prioritized findings in seconds
 ```
 
@@ -48,7 +48,7 @@ clean before ship
 ## Quick start
 
 ```bash
-pip install cognis-metascrub
+pip install "git+https://github.com/cognis-digital/metascrub.git"
 metascrub --version
 metascrub scan .                       # scan current project
 metascrub scan . --format json         # machine-readable
