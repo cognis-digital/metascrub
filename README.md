@@ -20,6 +20,12 @@ pip install "git+https://github.com/cognis-digital/metascrub.git"
 metascrub scan .            # → prioritized findings in seconds
 ```
 
+<!-- cognis:layman:start -->
+## What is this?
+
+metascrub removes hidden information from documents and images before you share them publicly. When you take a photo or create a PDF, your device quietly embeds details like your name, the software you used, your camera model, and sometimes even your location — metascrub finds and strips all of that out. Run it on any PNG, JPEG, or PDF file from the command line and get a clean copy ready to share. It is built for developers, security professionals, and anyone who needs to publish files without accidentally revealing personal or system details.
+<!-- cognis:layman:end -->
+
 ## Contents
 
 - [Why metascrub?](#why) · [Features](#features) · [Quick start](#quick-start) · [Example](#example) · [Architecture](#architecture) · [AI stack](#ai-stack) · [How it compares](#how-it-compares) · [Integrations](#integrations) · [Install anywhere](#install-anywhere) · [Related](#related) · [Contributing](#contributing)
@@ -45,6 +51,42 @@ clean before ship
 <div align="right"><a href="#top">↑ back to top</a></div>
 
 <a name="quick-start"></a>
+<!-- cognis:install:start -->
+## Install
+
+`metascrub` is source-available (not published to PyPI) — every method below installs
+straight from GitHub. Pick whichever you prefer; the one-line scripts auto-detect
+the best tool available on your machine.
+
+**One-liner (Linux / macOS):**
+```sh
+curl -fsSL https://raw.githubusercontent.com/cognis-digital/metascrub/HEAD/install.sh | sh
+```
+
+**One-liner (Windows PowerShell):**
+```powershell
+irm https://raw.githubusercontent.com/cognis-digital/metascrub/HEAD/install.ps1 | iex
+```
+
+**Or install manually — any one of:**
+```sh
+pipx install "git+https://github.com/cognis-digital/metascrub.git"     # isolated (recommended)
+uv tool install "git+https://github.com/cognis-digital/metascrub.git"  # uv
+pip install "git+https://github.com/cognis-digital/metascrub.git"      # pip
+```
+
+**From source:**
+```sh
+git clone https://github.com/cognis-digital/metascrub.git
+cd metascrub && pip install .
+```
+
+Then run:
+```sh
+metascrub --help
+```
+<!-- cognis:install:end -->
+
 ## Quick start
 
 ```bash
