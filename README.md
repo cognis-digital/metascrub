@@ -20,6 +20,34 @@ pip install cognis-metascrub
 metascrub scan .            # → prioritized findings in seconds
 ```
 
+## Usage — step by step
+
+1. **Install** (Python 3.8+, stdlib only):
+   ```bash
+   pip install metascrub        # or: pipx install metascrub
+   ```
+2. **Scan a file for identifying metadata** (read-only, no changes written):
+   ```bash
+   metascrub scan report.pdf photo.jpg
+   ```
+   `scan` exits `1` when any metadata is found, `0` when clean — so it doubles as a gate.
+3. **Write a sanitized copy** with metadata stripped:
+   ```bash
+   metascrub clean photo.jpg -o photo.clean.jpg     # single file -> explicit output
+   metascrub clean *.png --in-place                 # overwrite in place
+   ```
+   (`-o/--output` is only valid with a single input file.)
+4. **Read the output as JSON** for tooling / dashboards:
+   ```bash
+   metascrub --format json scan report.pdf | jq '.total_findings, .results[].findings'
+   ```
+   The payload includes `tool`, `version`, `action`, `results[]`, `total_findings`, and `errors`.
+5. **Gate a release pipeline in CI** — fail the build if any artifact still carries metadata:
+   ```bash
+   metascrub scan dist/*.pdf dist/*.png || { echo "metadata leak — blocking release"; exit 1; }
+   ```
+
+
 ## Contents
 
 - [Why metascrub?](#why) · [Features](#features) · [Quick start](#quick-start) · [Example](#example) · [Architecture](#architecture) · [AI stack](#ai-stack) · [How it compares](#how-it-compares) · [Integrations](#integrations) · [Install anywhere](#install-anywhere) · [Related](#related) · [Contributing](#contributing)
